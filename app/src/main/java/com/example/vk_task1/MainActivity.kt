@@ -5,7 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+//Test git
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
