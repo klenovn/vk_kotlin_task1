@@ -1,5 +1,6 @@
 package com.example.vk_task1
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,11 @@ class MainAdapter(private val rectangles: MutableList<Int>) : RecyclerView.Adapt
         val number = rectangles[position]
         holder.numberText.text = number.toString()
         holder.square.setBackgroundResource(if (number % 2 == 0) R.color.red else R.color.blue)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra("item_number", number)
+            it.context.startActivity(intent)
+        }
     }
 
     class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
